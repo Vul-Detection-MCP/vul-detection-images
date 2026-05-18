@@ -1,0 +1,13 @@
+FROM alpine/git:2.52.0 AS clone
+
+RUN mkdir /app && \
+    cd /app && \
+    git clone --depth 1 --revision e6b6c45748c98ab7d1b1828b9728b47ebbe14096 https://github.com/Vul-Detection-MCP/codebadger.git .
+
+FROM python:3.13.3 AS build
+
+COPY --from=clone /app/ /app/
+
+RUN cd /app && pip install -r requirements.txt
+
+CMD ["python", "/app/main.py"]
