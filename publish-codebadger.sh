@@ -1,5 +1,5 @@
 #!/bin/sh
 docker build \
   -f Dockerfile-Codebadger \
-  -t biggujo/vul-detection-codebadger:3148f520fb1fa0307396865d0c1ddee6ee45cbe0 .
-docker push biggujo/vul-detection-codebadger:3148f520fb1fa0307396865d0c1ddee6ee45cbe0
+  -t biggujo/vul-detection-codebadger:007a1f302224b974d80ece629310efd3604a7f29 .
+docker push biggujo/vul-detection-codebadger:007a1f302224b974d80ece629310efd3604a7f29
