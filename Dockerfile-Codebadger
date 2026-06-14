@@ -2,7 +2,7 @@ FROM alpine/git:2.52.0 AS clone
 
 RUN mkdir /app && \
     cd /app && \
-    git clone --depth 1 --revision b61146faa7c38bd4380837f4fda9266b766a2411 https://github.com/Vul-Detection-MCP/codebadger.git .
+    git clone --depth 1 --revision 38aa04b79a705f3e839a6ef5211897df4cbb166b https://github.com/Vul-Detection-MCP/codebadger.git .
 
 FROM python:3.13.3 AS build
 
